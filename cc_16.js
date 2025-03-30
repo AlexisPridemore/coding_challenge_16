@@ -77,3 +77,8 @@ function displayProducts(products) {
 function handleError(error) {
     console.error("An error occurred: ", error); 
 }  // Logs an error message
+
+// Task 6 Call Fetch Functions
+
+fetchProductsThen();
+fetchProductsAsync();
