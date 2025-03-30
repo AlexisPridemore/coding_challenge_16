@@ -1,4 +1,4 @@
-// Task 2 Fetch Products
+// Task 2 Fetch Products w/ .then()
 
 function fetchProductsThen() {
     fetch('https://www.course-api.com/javascript-store-products') // Using Fetch to get product data from API
@@ -19,3 +19,17 @@ function fetchProductsThen() {
         console.error('Error occurred during fetch operation:', error); // Logging of error to console
     })
 }
+
+// Task 3 Fetch Products w/ async/wait
+
+async function fetchProductsAsync() {
+    try {
+        const response = await fetch("https://www.course-api.com/javascript-store-products");
+        // Fetching Product data from API
+        const productData = await response.json();
+        displayProducts(productData);   //displaying products on webpage
+    } catch (error) {
+        handleError(error);
+    }
+}
+
